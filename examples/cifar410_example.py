@@ -21,7 +21,7 @@ def keras_fit(epochs=10, use_bias=True):
     model.add(layers.Conv2D(64, (3, 3), activation='relu', kernel_initializer=init, use_bias=use_bias))
     model.add(layers.Flatten())
     model.add(layers.Dense(64, activation='relu', kernel_initializer=init, use_bias=use_bias))
-    model.add(layers.Dense(10, kernel_initializer=init, use_bias=use_bias))
+    model.add(layers.Dense(10, kernel_initializer=init, use_bias=use_bias)) 
     model.compile(optimizer='sgd',
                   loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
                   metrics=['accuracy'])
